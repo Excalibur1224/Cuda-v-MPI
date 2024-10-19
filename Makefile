@@ -1,4 +1,9 @@
-CC = nvcc
+GCC = g++
+MPI = mpigxx
 
-cintegrate: cintegrate.cu
-	$(CC) $(CFLAGS) -o $@ cintegrate.cu -lm
+riemann: riemann.cpp
+	$(MPI) $(CFLAGS) -o $@ riemann.cpp
+
+hello_riemann: hello_riemann.cpp
+	$(GCC) $(CFLAGS) -o $@ hello_riemann.cpp -lm
+
